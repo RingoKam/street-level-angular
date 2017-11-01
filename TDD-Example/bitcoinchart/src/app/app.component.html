@@ -1,0 +1,19 @@
+<h1>Bit Coin Price of the day</h1>
+
+<div>
+    <h2>Start Date</h2>
+    <kendo-datepicker [(value)]="startDate"></kendo-datepicker>    
+</div>
+<div>
+    <h2>End Date</h2>
+    <kendo-datepicker [(value)]="endDate"></kendo-datepicker>
+</div>
+<button (click)="GetRecords()">Refresh</button>
+<kendo-chart [categoryAxis]="{ categories: Bpi_Date }">
+    <kendo-chart-title text="Bit Coin Price Index"></kendo-chart-title>
+    <kendo-chart-legend position="bottom" orientation="horizontal"></kendo-chart-legend>
+    <kendo-chart-series>
+        <kendo-chart-series-item *ngFor="let item of Bpi_data" type="line" [data]="item.data" [name]="item.name">
+        </kendo-chart-series-item>
+    </kendo-chart-series>
+</kendo-chart>
