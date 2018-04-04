@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('angular-cli-seed App', () => {
+describe('angular-seed App', () => {
   let page: AppPage;
 
   beforeEach(() => {
